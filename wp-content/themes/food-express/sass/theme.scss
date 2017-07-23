@@ -1,0 +1,27 @@
+/*
+Theme Name: Food Express
+Theme URI: https://www.templateexpress.com/food-express-theme
+Author: Template Express
+Author URI: https://www.templateexpress.com
+Description: Owing to the modern and clean look Food Express WordPress Food Theme is an ideal choice for small food based businesses. Spectacular custom home page displays effectively both eye-catching images and detailed information to promote you and your services. The theme is integrated with WordPress customizer, offers custom color options and gives you all possibilities to change its look without any coding.
+Version: 1.0.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: food-express
+Tags: food-and-drink, one-column, two-columns, right-sidebar, featured-images, threaded-comments, translation-ready, blog, custom-logo, editor-style, full-width-template, custom-colors, custom-background, theme-options, custom-menu, custom-header, flexible-header
+*/
+
+@import
+  "theme/variables";
+
+@import
+  "base/mixins",
+  "base/reset",
+  "base/accessibility",
+  "base/alignment",
+  "base/galleries",
+  "base/styles",
+  "base/grid",
+  "base/print";
+
+@import "theme/theme-styles";

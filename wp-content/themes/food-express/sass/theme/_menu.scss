@@ -1,0 +1,229 @@
+/* == MENU STYLES == */
+
+// == Main Menu
+.main-navigation {
+  z-index: 999;
+  position: relative;
+  float: none;
+  // == Mobile menu button
+  .menu-toggle {
+    float: right;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    background: none;
+    box-shadow: none;
+    border: none;
+    .bars {
+      display: block;
+      background: $light-grey;
+      width: 1.6rem;
+      height: .2rem;
+      margin-bottom: .3rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  // !== Mobile menu button
+
+  // == Menu
+  ul.nav-menu{
+    float: right;
+    clear: both;
+    width: 100%;
+  }
+
+  // Level 1
+  ul {
+    display: none;
+    margin: 0;
+    list-style: none;
+    // Level 2
+    ul {
+      background-color: $menu-bg-color;
+    }
+
+    // Menu item
+    li {
+      border-top: $menu-border;
+      margin-bottom: 0;
+
+      a {
+        display: block;
+        width: 100%;
+        padding: ($menu-item-padding * 2) $menu-item-padding; // 1rem .5rem;
+        font-weight: $menu-font-weight;
+        font-size: $menu-font-size;
+        letter-spacing: $menu-letter-spacing;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+  // !== Menu
+
+  // Menu toggled
+  &.toggled ul.nav-menu{
+    display: block;
+    padding: 0;
+    margin-top: 2em;
+    .sub-menu{
+      display:block;
+      padding-left: 1em;
+      background-color: transparent;
+    }
+  }
+}
+// !== Main Menu
+
+// == Navigation styles for columns layout
+@media (#{$column-starts-at-breakpoint}) {
+  // == Main Menu
+  .main-navigation {
+    float: right;
+    // == Mobile menu button hidden
+    .menu-toggle {
+      display: none;
+    }
+
+    // == Menu
+    ul.nav-menu{
+      display: block;
+      width: auto;
+      clear: none;
+      margin: 1rem 0;
+      padding: 0;
+      // Submenu
+      ul {
+        display: none;
+        opacity: 0;
+        text-transform: capitalize;
+        transition: opacity .25s ease-in-out;
+         -moz-transition: opacity .25s ease-in-out;
+         -webkit-transition: opacity .25s ease-in-out;
+        li {
+          display: block;
+          float: none;
+          margin-left: 0;
+        }
+
+        // Reset depth padding
+        a,
+        ul a {
+          cursor: pointer;
+        }
+      }
+
+      > li {
+          position: relative;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child > a {
+            padding-right: 0;
+          }
+        > a{
+          &:before{
+          	background: #fff none repeat scroll 0 0;
+          	bottom: 0px;
+          	content: "";
+          	height: 2px;
+          	left: 0;
+          	position: absolute;
+          	width: 0;
+          	-webkit-transition: all 0.3s ease-in-out 0s;
+          	transition: all 0.3s ease-in-out 0s;
+          }
+
+        }
+        &:hover,
+        &:active,
+        &:focus{
+          > a{
+            &:before{
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      // == Menu item
+      li {
+        border-top: 0;
+        float: left;
+        margin-left: 0.5rem;
+
+        // == Dropdown menu on hover
+        &:hover,
+        &:focus,
+        &:active {
+          position: relative;
+
+          > ul {
+            display: block;
+            opacity: 1;
+          }
+        }
+
+        ul {
+          display: none;
+          position: absolute;
+          top: $menu-submenu-top - .1;
+          box-shadow: $menu-dropdown-shadow;
+          background: $menu-bg-color;
+          padding: 0;
+          text-align: center;
+          li {
+            border-bottom: $menu-sub-border-bottom;
+            > a {
+              width: $menu-subitem-width;
+              color: $light-grey;
+              text-transform: capitalize;
+              &:hover{
+                background: #000;
+                color: #fff;
+              }
+            }
+
+            ul {
+              left: 100%;
+              top: 0;
+              padding-left: 0.4em;
+            }
+            &:last-child{
+              border-bottom: 0;
+            }
+          }
+        }
+        // !== Dropdown Menu on Hover
+      }
+
+      // First level with submenu hover effect
+     > li[aria-haspopup=true] {
+        > a:after{
+          font-family: 'Fontawesome';
+          -webkit-font-smoothing: antialiased;
+          content: "\f078";
+          margin-left: .45rem;
+          position: relative;
+          top: -2px;
+        }
+        ul li[aria-haspopup=true] {
+           > a:after{
+             font-family: 'Fontawesome';
+             -webkit-font-smoothing: antialiased;
+             content: "\f105";
+             float: right;
+             position: absolute;
+             right: 10px;
+           }
+         }
+      }
+      // !== Menu Item
+    }
+    // == Menu
+  }
+  // !== Main Menu
+}
+// !== Navigation styles for columns layout

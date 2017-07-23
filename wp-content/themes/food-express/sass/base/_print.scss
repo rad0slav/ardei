@@ -1,0 +1,14 @@
+@media print{
+  #secondary,
+  #colophon,
+  .main-navigation,
+  .site-info,
+  .nav-links,
+  #respond{
+    display: none;
+  }
+  #primary{
+    margin: 0 auto;
+    float: none;
+  }
+}

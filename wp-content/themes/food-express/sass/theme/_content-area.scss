@@ -1,0 +1,37 @@
+.site-content{
+  margin-top: 5rem;
+  &:not(.container) {
+    @include lateral-paddings();
+
+    @media (#{$column-starts-at-breakpoint}) {
+      @include lateral-paddings(3rem);
+    }
+  }
+  article{
+    .entry-title{
+      margin-top: 0;
+    }
+    .attachment-post-thumbnail{
+      margin-bottom: $article-featured-image-margin;
+    }
+    .page-links{
+      clear:both;
+    }
+  }
+}
+.page-template-homepage .site-content{
+  margin-top: 0;
+  padding: 0;
+  .padding{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (#{$column-starts-at-breakpoint}) {
+  .page-template-homepage .site-content{
+    .padding{
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+// COLORS (more in /inc/customizer-colors.php)
+$light-grey:            #e1e1e1;
+$dark-grey:             rgb(35, 40, 47);
+$primary-color:         #d72d5c;
+$secondary-color:       #cb7152;
+
+$border-color:          rgba(187, 187, 187, 0.21);
+$font-color:            #222;
+$link-color:            $secondary-color;
+
+// TYPOGRAPHY (more in _typography.scss)
+$font-family:           'Merriweather', Georgia, serif;
+$heading-font-family:   'Cabin', Helvetica, sans-serif;
+$h1-font-size:          2.5rem;
+$h2-font-size:          2.25rem;
+$h3-font-size:          2rem;
+$h4-font-size:          1.8rem;
+$h5-font-size:          1.5rem;
+$h6-font-size:          1.25rem;
+$h1-font-size-large-screen: 3rem;
+$h2-font-size-large-screen: 2.8rem;
+$h3-font-size-large-screen: 2.5rem;
+$h4-font-size-large-screen: 2.25rem;
+$h5-font-size-large-screen: 2rem;
+$h6-font-size-large-screen: 1.8rem;
+
+// BREAKPOINTS
+$bp-larger-than-mobile    : "min-width: 400px";
+$bp-larger-than-phablet   : "min-width: 550px";
+$bp-larger-than-tablet    : "min-width: 750px";
+$bp-larger-than-desktop   : "min-width: 1000px";
+$bp-larger-than-desktophd : "min-width: 1200px";
+
+// GRID
+$container-width: 960px;
+$container-width-larger-than-mobile: 85%;
+$container-width-larger-than-phablet: 80%;
+$total-columns: 12;
+$column-width: 100 / $total-columns; // calculates individual column width based off of # of columns
+$column-margin: 4%; // space between columns
+$column-starts-at-breakpoint: $bp-larger-than-phablet;
+
+// MISC
+$global-radius: 4px;
+$global-padding: 1rem;
+
+// MENU (more in _menu.scss)
+$menu-breakpoint:       $bp-larger-than-phablet; // breakpoint to stop showing hamburger menu
+$menu-font-size:        0.7rem;
+$menu-font-weight:      400;
+$menu-letter-spacing:   .15rem;
+$menu-bg-color:         #15171a;
+$menu-sub-border-bottom: darken($light-grey, 60%) dotted 1px;
+$menu-border:           $border-color solid 1px;
+$menu-dropdown-shadow:  0 3px 3px rgba(0, 0, 0, 0.2);
+$menu-item-padding:     .4rem;
+$menu-subitem-width:    11rem;
+$menu-subitem-indent:   2rem;
+$menu-submenu-top:      $menu-item-padding + 2.4rem;
+$pre-head-list-margin:  0.5rem 0;
+
+$article-featured-image-margin: 4rem;

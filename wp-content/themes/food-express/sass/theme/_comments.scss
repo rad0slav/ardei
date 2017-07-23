@@ -1,0 +1,123 @@
+// == COMMENTS STYLES
+.required{
+  color: darken(red, 20%);
+}
+.comment-list {
+  list-style: none;
+  padding-left: 0;
+  clear:both;
+  overflow: hidden;
+  ol.children,
+  ul.children {
+    margin-left: .5rem;
+    margin-bottom: 0;
+    clear: both;
+    overflow: hidden;
+    list-style-type: none;
+    li{
+      overflow: hidden;
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.comment-meta .vcard {
+  line-height: 1;
+  img {
+    float: left;
+    margin-right: 1rem;
+  }
+}
+
+.comments-area{
+  h2{
+    margin-bottom: 0;
+    font-size: 2.2rem;
+  }
+  h3{
+    margin-bottom: 0;
+  }
+  .comment-form{
+    margin-bottom: 4em;
+    p{
+      margin-bottom: 1rem;
+    }
+    label{
+      display:block;
+    }
+    textarea,
+    input{
+      width: 100%;
+      padding: 1em;
+      font-size: 1rem;
+      color: $dark-grey;
+    }
+    input{
+      padding: .4em 1em;
+    }
+    .comment-form-comment{
+      margin-bottom: .5em;
+    }
+    .form-submit input{
+      display: inline-block;
+      background-color: $secondary-color;
+      color: #fff;
+      line-height: 1;
+      padding: 0.5rem 1.33rem;
+      cursor: pointer;
+      z-index: 10;
+      position: relative;
+      width: auto;
+      transition: all .2s ease-in-out;
+      text-transform: capitalize;
+      border: 1px solid #cb7152;
+      &:hover,
+      &:visited,
+      &:active{
+        background: darken(#cb7152, 10%);
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.comment {
+  padding: 0.5rem;
+  .comment-body{
+    background: rgba(0,0,0,.03);
+    border: 1px solid #dddddd;
+    border-radius: 0;
+    clear: both;
+    display: block;
+    float: left;
+    margin-bottom: 15px !important;
+    margin-top: 5px;
+    padding: 20px 20px 10px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+  .comment-content {
+    a {
+      word-wrap: break-word;
+    }
+
+    p:last-child {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &.bypostauthor{
+    .comment-body{
+      border-left:10px solid $secondary-color;
+    }
+  }
+}
+
+.comment-area{
+  h3{
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,211 @@
+/* == FOOTER STYLES == */
+.site-footer{
+  background: $dark-grey;
+  color: $light-grey;
+  padding: 2rem 0;
+  h1,h2,h3,h4,h5{
+    color: $light-grey;
+  }
+  h4{
+    font-size:$h4-font-size / 1.6;
+  }
+  .site-footer__content {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    &:not(.container) {
+      @include lateral-paddings();
+
+      @media (#{$column-starts-at-breakpoint}) {
+        @include lateral-paddings(3rem);
+      }
+    }
+    a{
+      transition: all .2s ease-in-out;
+      &:hover{
+        color: $light-grey;
+      }
+    }
+    p{
+      margin-bottom: 1.4rem;
+    }
+    .site-title{
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .menu-social{
+      width: 100%!important;
+      margin: 0 0 .8rem;
+      text-align: center;
+      padding: 0;
+      ul{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        a{
+          border:none;
+          padding: 0;
+        }
+      }
+    }
+    .contact-info{
+      clear: both;
+      overflow: hidden;
+      margin-bottom: 3rem;
+      text-align: center;
+      span{
+        margin: 0.6rem;
+      }
+      i{
+        margin-right: 4px;
+      }
+    }
+  }
+  .widget{
+    h4{
+      text-align: left;
+      padding-left: 25px;
+      letter-spacing: 1px;
+      &:before{
+        content: '';
+        position: relative;
+        width: 25px;
+        height: 1px;
+        top: -5px;
+        margin-right: 5px;
+        margin-left: -20px;
+        display: inline-block;
+        background-color: #cb7152;
+      }
+    }
+    caption,
+    th,
+    td{
+      padding: 6px 8px;
+    }
+    ul{
+      padding: 0;
+      list-style-type: none;
+      line-height: 2.5;
+    }
+    .tagcloud{
+      a{
+        font-size: 8pt;
+        padding: 8px 14px;
+        border: 1px solid #cb7152;
+        border-radius: 5px;
+        margin: 2px 8px 8px 0;
+        display: inline-block;
+        cursor: pointer;
+        &:hover{
+          background: #cb7152;
+          color: #fff;
+        }
+        &:visited{
+          color: $light-grey;
+        }
+      }
+    }
+  }
+
+}
+.site-info{
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 80%;
+  p{
+    margin: 0;
+    text-align: center;
+  }
+}
+@media (#{$column-starts-at-breakpoint}) {
+  .site-info{
+    text-align: left;
+    p{
+      text-align: inherit;
+    }
+  }
+}
+
+.mc4wp-form {
+	padding-top: 10px;
+	padding-bottom: 20px;
+  input,
+  textarea,
+  select{
+    transition: all .3s;
+  	margin: 0px;
+  	background: none;
+  	font-size: 14px;
+  	line-height: 18px;
+  	height: 46px;
+  	border-color: rgba(255, 255, 255, 0.3);
+  	color: #ffffff;
+  }
+  input[type=email] {
+  	width: 240px;
+  	display: inline-block;
+  	vertical-align: top;
+  	border-top-left-radius: 15px;
+  	border-bottom-left-radius: 15px;
+  	border-right: none;
+  	width: 66%;
+    padding-left: 8px;
+    &:focus{
+      border-color: #cb7152;
+      border-right: none!important;
+    }
+  }
+  textarea:hover{
+    border-color: #cb7152;
+    border-right: none!important;
+  }
+  input[type=submit] {
+  	font-size: 12px;
+  	line-height: 1em;
+  	color: #fff;
+  	text-align: center;
+  	vertical-align: top;
+  	padding: 1em 0em!important;
+  	border: solid 1px #cb7152;
+  	background: transparent;
+  	border-radius: 0px;
+  	border-top-right-radius: 15px;
+  	border-bottom-right-radius: 15px;
+  	width: 34%;
+    &:hover{
+      background: #cb7152!important;
+      color: #fff;
+    }
+  }
+  p {
+  	font-size: 11px;
+  	color: #6b6b6b;
+  }
+}
+.back-to-top{
+  position: fixed;
+  opacity: 0;
+  bottom: 60px;
+  font-size: 18px;
+  text-align: center;
+  right: 25px;
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 16px;
+  padding: 8px;
+  margin-left: 0px;
+  border: solid 2px #cb7152;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: transparent;
+  text-shadow: none;
+  color: #cb7152;
+  transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.back-to-top:hover {
+    background-color: #cb7152;
+    color: #fff;
+}

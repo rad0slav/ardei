@@ -1,0 +1,11 @@
+/* MENU */
+.main-navigation > ul {
+  z-index: 10000;
+}
+
+/* SUB MENUS ON COLUMNS VIEW */
+@media (#{$column-starts-at-breakpoint}) {
+  .main-navigation > ul li ul {
+    z-index: 11000;
+  }
+}

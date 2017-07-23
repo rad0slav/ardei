@@ -1,0 +1,59 @@
+// == Set all elements to use `box-sizing: border-box`
+html {
+  box-sizing: border-box;
+}
+html,
+body{
+  overflow-x: hidden;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #fff;
+}
+// !== Set all elements to use `box-sizing: border-box`
+
+// == Margins
+// More margins settings can be found in _alignment.scss file
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form,
+address {
+  margin: 0 0 2.5rem;
+}
+ul ul,
+ul ol,
+ol ul,
+ol ol{
+  margin-bottom: 0;
+}
+dd {
+  margin-bottom: 1rem;
+}
+// !== Margins
+
+// == Max-size and proportions
+img,
+figure {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+// !== Max-size and proportions

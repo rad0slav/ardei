@@ -1,0 +1,178 @@
+.rtb-booking-form{
+	text-align: center;
+}
+.entry-content .rtb-booking-form fieldset{
+	border: none;
+	margin: 1em 0;
+	padding: 0;
+	width: 100%;
+	float: left;
+}
+.entry-content .rtb-booking-form fieldset.contact>div{
+	width: 100%;
+	margin-right: 0;
+}
+.rtb-booking-form fieldset legend{
+	font-size: 28px;
+	margin-left: -15px;
+	text-align: left;
+}
+.entry-content .rtb-booking-form fieldset>div{
+	clear: both;
+	overflow: hidden;
+}
+
+.rtb-booking-form .rtb-select:after,
+.rtb-booking-form .rtb-text:after{
+	clear: both;
+	display: table;
+	content: "";
+}
+.rtb-booking-form label{
+	float: left;
+	width: 30%;
+	display: block;
+	margin: 0;
+	height: 47px;
+	padding: 11px 10px 12px;
+	border: 1px solid rgba(0,0,0,.3);
+	border-right-width: 0;
+	border-bottom-width: 1px;
+	text-align: left;
+}
+.rtb-booking-form .radio-option,
+.rtb-booking-form .checkbox{
+	position: relative;
+}
+.rtb-booking-form .radio-option label,
+.rtb-booking-form .checkbox label{
+	float: none;
+	width: 100%;
+	border-bottom: 1px solid rgba(0,0,0,.3);
+	// border-bottom: none;
+	border-right: 1px solid rgba(0,0,0,.3);
+}
+
+.rtb-textarea label{
+	border-right-width: 1px;
+	border-bottom: 0;
+	width: 100%;
+}
+.rtb-booking-form .rtb-select select,
+.rtb-booking-form .rtb-text input{
+	float:right;
+	width: 70%;
+	max-width: 100%;
+	cursor: pointer;
+	display: block;
+	padding: 11px 20px 12px;
+	border: 1px solid rgba(0,0,0,.3);
+	background: #fafafa;
+	font-size: 14px;
+	line-height: 20px;
+	height: 47px;
+	border-radius: 0;
+}
+.entry-content .rtb-booking-form .message-set{
+	width: 100%;
+	float: none;
+}
+.rtb-booking-form .message-set .add-message{
+	display: none;
+}
+.rtb-booking-form .message-set .rtb-textarea{
+	position: relative;
+	top: 0;
+	left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+.entry-content .rtb-booking-form .rtb-textarea textarea,
+.entry-content .rtb-booking-form .large-text-field textarea{
+	max-width: 100%;
+	border: 1px solid rgba(0,0,0,.3);
+	border-radius: 0;
+	background: #FAFAFA;
+	min-height: 12em;
+}
+.entry-content .rtb-booking-form .rtb-confirm label{
+	width: 100%;
+	border-right: 1px solid rgba(0,0,0,.3);
+}
+
+.rtb-booking-form label:before {
+    content: '';
+    position: relative;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+		font: normal normal normal 14px/1 FontAwesome;
+}
+.rtb-select.location label:before{
+  content: "\f041";
+}
+.rtb-text.date label:before{
+	content: "\f073";
+}
+.rtb-text.time label:before{
+	content: "\f017";
+}
+.rtb-select.party label:before{
+	content: "\f0c0";
+}
+.rtb-text.name label:before{
+	content: "\f007";
+}
+.rtb-text.email label:before{
+	content: "\f003";
+}
+.rtb-text.phone label:before{
+	content: "\f095";
+}
+.rtb-textarea.message label:before{
+	content: "\f044";
+}
+.rtb-booking-form button{
+	box-shadow: none;
+	border: none;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	text-shadow: none;
+	text-transform: uppercase;
+	padding: 20px 80px;
+	margin: 1em 0;
+	transition: all .2s ease-in-out;
+}
+.rtb-booking-form button:focus,
+.rtb-booking-form button:hover{
+	background-color: #ab8b65;
+}
+
+.rtb-booking-form .rtb-checkbox label:not(:first-child),
+.rtb-booking-form .rtb-radio label:not(:first-child) {
+    border-top: none;
+    background: #fafafa;
+}
+@media (min-width: 480px){
+	.rtb-booking-form .rtb-select:after,
+	.rtb-booking-form .rtb-select:before,
+	.rtb-booking-form .rtb-text:after,
+	.rtb-booking-form .rtb-text:before {
+	    content: " ";
+	    display: table;
+	}
+}
+@media (min-width: 768px){
+	.entry-content .rtb-booking-form fieldset.reservation,
+	.entry-content .rtb-booking-form fieldset.contact{
+		width: 50%;
+		float: left;
+	}
+	.entry-content .rtb-booking-form fieldset.reservation>div,
+	.entry-content .rtb-booking-form fieldset.contact>div {
+	    margin-right: 30px;
+	}
+}

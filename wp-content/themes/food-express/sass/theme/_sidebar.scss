@@ -1,0 +1,105 @@
+.sidebar{
+  h2.widget-title{
+    font-size: $h2-font-size / 1.3;
+    margin-bottom: 0.75em;
+    padding-bottom: 0.75em;
+    line-height: 1.25em;
+    position: relative;
+    border-bottom: 2px solid $light-grey;
+  }
+  ul{
+    list-style-type: none;
+    padding: 0;
+    li{
+      line-height: 1.6;
+      border-bottom: 1px solid $light-grey;
+      padding: .7em 0;
+    }
+  }
+  /* Search */
+  .widget_search{
+    .search-field{
+      width: 100%;
+      border: 1px solid $light-grey;
+      line-height: 2em;
+      padding: .5em;
+    }
+    .search-submit{
+      display: none;
+    }
+  }
+  /* Calendar */
+  .calendar_wrap {
+    border: 1px solid $light-grey;
+    padding: 13px;
+    width: 100%;
+    overflow: hidden
+  }
+  #wp-calendar {
+      width: 100%;
+      font-size: 12px;
+      font-weight: 300;
+      border-collapse: separate;
+      border-spacing: 4px
+  }
+  #wp-calendar caption {
+      padding: 0 0 1em 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.25em
+  }
+  #wp-calendar td,
+  #wp-calendar th {
+      margin-bottom: 10px;
+      text-align: center;
+      padding: 6px !important;
+      border: none !important;
+      background: transparent
+  }
+  #wp-calendar tbody td {
+      padding: 3px
+  }
+  #wp-calendar tbody td#today {
+      border: 1px solid transparent
+  }
+  #wp-calendar tfoot td#prev a,
+  #wp-calendar tfoot td#next a {
+      font-size: 12px;
+      text-transform: uppercase
+  }
+  #wp-calendar tfoot td#prev {
+      text-align: left
+  }
+  #wp-calendar tfoot td#next {
+      text-align: right
+  }
+  #wp-calendar thead th {
+      font-size: 13px;
+      font-weight: 400;
+      text-align: center;
+      padding-bottom: 10px
+  }
+  @media screen and (min-width: 893px) and (max-width: 1200px) {
+      #calendar_wrap {
+          padding: 5px
+      }
+      #wp-calendar thead th {
+          font-size: 10px
+      }
+      #wp-calendar tbody td,
+      #calendar_wrap {
+          font-size: 9px
+      }
+      #wp-calendar caption {
+          padding-top: 0
+      }
+  }
+}
+.widget-area{
+  .calendar_wrap{
+    table{
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+}
